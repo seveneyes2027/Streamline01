@@ -4,7 +4,7 @@ import time
 from pathlib import Path
 
 STREAM_KEY = os.environ.get("YOUTUBE_STREAM_KEY")
-VIDEO_FILE = "video2.mp4"
+VIDEO_FILE = "video.mp4"
 PLAYLIST_FILE = "playlist.txt"
 
 if not STREAM_KEY:
@@ -40,9 +40,9 @@ command = [
     "-stream_loop", "-1", "-i", PLAYLIST_FILE,
     "-c:v", "libx264",
     "-preset", "ultrafast",
-    "-b:v", "10000k",
-    "-maxrate", "10000k",
-    "-bufsize", "20000k",
+    "-b:v", "7500k",
+    "-maxrate", "7500k",
+    "-bufsize", "15000k",
     "-pix_fmt", "yuv420p",
     "-r", "30",          # 30 FPS
     "-g", "60",          # 30 FPS සඳහා Keyframe interval එක 60
